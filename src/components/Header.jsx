@@ -1,8 +1,9 @@
+import gameLogo from "../../public/in-game-logo.png";
 export default function Header() {
   return (
     <div className="container">
       <div className="logo">
-        <img src="../public/in-game-logo.png" alt="game logo image" />
+        <img src={gameLogo} alt="game logo" />
       </div>
       <h1>Chinese Phrases Building Game</h1>
     </div>
