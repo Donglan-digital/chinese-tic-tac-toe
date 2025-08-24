@@ -8,7 +8,7 @@ export default function Difficulty({ level, onClose }) {
             <li>Pick a Chinese character and place it in a box.</li>
             <li>
               Put another character in a box next to the first one to make a
-              two-characte phrase:
+              two-character phrase:
             </li>
             <ul>
               <li>• side by side (left↔️right)</li>
@@ -26,7 +26,7 @@ export default function Difficulty({ level, onClose }) {
             <li>Pick a Chinese character and place it in a box.</li>
             <li>
               Put another character in a box next to the first one to make a
-              two-characte phrase:
+              two-character phrase:
             </li>
             <ul>
               <li>• left to right (ONLY ➡️)</li>
