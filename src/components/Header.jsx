@@ -1,4 +1,4 @@
-import gameLogo from "../../public/in-game-logo.png";
+import gameLogo from "./assets/in-game-logo.png";
 export default function Header() {
   return (
     <div className="container">
