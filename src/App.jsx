@@ -16,6 +16,7 @@ export default function App() {
   const [winner, setWinner] = useState(null);
   const [scores, setScores] = useState({ blue: 0, red: 0 });
   const [gameStopped, setGameStopped] = useState(false);
+  const [resetSignal, setResetSignal] = useState(null);
 
   const handleCellClick = (index) => {
     if (!boardValues[index] && !winner && !gameStopped) {
@@ -139,6 +140,7 @@ export default function App() {
           <div className="teams-and-gameboard">
             <Team
               side="left"
+              resetSignal={resetSignal}
               winner={
                 winner === "blue"
                   ? "Winner!"
@@ -151,6 +153,7 @@ export default function App() {
               onGoFirst={(team) => {
                 setFirstTeam(team);
                 setCurrentTurn(team);
+                setResetSignal(team);
               }}
               isFirst={firstTeam === "blue"}
               isCurrentTurn={currentTurn === "blue"}
@@ -168,6 +171,7 @@ export default function App() {
             </div>
             <Team
               side="right"
+              resetSignal={resetSignal}
               winner={
                 winner === "red"
                   ? "Winner!"
@@ -180,6 +184,7 @@ export default function App() {
               onGoFirst={(team) => {
                 setFirstTeam(team);
                 setCurrentTurn(team);
+                setResetSignal(team);
               }}
               isFirst={firstTeam === "red"}
               isCurrentTurn={currentTurn === "red"}
